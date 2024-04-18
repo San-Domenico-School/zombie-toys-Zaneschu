@@ -1434,7 +1434,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900389769}
   m_LocalRotation: {x: -0, y: -0.008096896, z: -0, w: 0.9999672}
-  m_LocalPosition: {x: -0.05, y: 0.835, z: 1.35}
+  m_LocalPosition: {x: 0, y: 0.835, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1451,7 +1451,7 @@ Rigidbody:
   m_GameObject: {fileID: 900389769}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 2
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1488,10 +1488,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.57825047
-  m_Height: 1.9630194
+  m_Radius: 0.59026235
+  m_Height: 2.028225
   m_Direction: 1
-  m_Center: {x: 0, y: 0.009409189, z: 0.07825047}
+  m_Center: {x: 0.00094805873, y: 0.040898085, z: -0.09236897}
 --- !u!114 &900389773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1504,7 +1504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c32067ea884548644b13cf9baddd4573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 50
   deathClip: {fileID: 0}
   playerMovement: {fileID: 900389776}
   playerAttack: {fileID: 900389775}
@@ -2194,6 +2194,7 @@ GameObject:
   - component: {fileID: 1489338663}
   - component: {fileID: 1489338662}
   - component: {fileID: 1489338661}
+  - component: {fileID: 1489338664}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2242,9 +2243,9 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 26.19599
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2267,14 +2268,28 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489338660}
-  m_LocalRotation: {x: 0.46571627, y: 0.50739086, z: -0.38435718, w: 0.6147622}
-  m_LocalPosition: {x: 1.557112, y: 13.129142, z: -8.143596}
+  m_LocalRotation: {x: -0.006910792, y: 0.98232085, z: -0.16532353, w: 0.0875564}
+  m_LocalPosition: {x: 3.93, y: 7.1, z: 19.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0.868, z: 0}
+  m_LocalEulerAnglesHint: {x: 161.12, y: -10.61499, z: -182.576}
+--- !u!114 &1489338664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489338660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7bced140059b694e91f0e48210059c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoothing: 5
+  offset: {x: -2, y: 7.1, z: 19.11}
 --- !u!1 &1523942226
 GameObject:
   m_ObjectHideFlags: 0
@@ -2637,8 +2652,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e790082644efe6241bc7ebb05c9afeed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cooldown: 2
-  damage: 20
+  Cooldown: 0.5
+  damage: 5
   range: 50
   strikeableMask:
     serializedVersion: 2
@@ -2883,7 +2898,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 1.5
+  m_StoppingDistance: 1.05
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -2904,10 +2919,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Spawner: {fileID: 0}
-  maxHealth: 100
+  maxHealth: 50
   scoreValue: 10
   sinkSpeed: 2.5
-  deathEffectTime: 2
+  deathEffectTime: 1
   deathClip: {fileID: 0}
   hurtClip: {fileID: 0}
   enemyAttack: {fileID: 1909272039}
@@ -2930,8 +2945,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SlimeDebuff: {fileID: 0}
-  timeBetweenAttacks: 0.5
-  attackDamage: 10
+  timeBetweenAttacks: 1
+  attackDamage: 5
   animator: {fileID: 1909272041}
 --- !u!114 &1909272040
 MonoBehaviour:
@@ -3246,8 +3261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2adeb8187a67ab14abf4fe3b22c8369c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  EnemyTarget: {fileID: 0}
+  Player: {fileID: 900389773}
+  EnemyTarget: {fileID: 900389770}
   delayOnPlayerDeath: 3
   infoText: {fileID: 0}
   gameoverText: {fileID: 0}
