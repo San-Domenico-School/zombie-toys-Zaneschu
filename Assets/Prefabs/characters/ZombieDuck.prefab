@@ -122,7 +122,7 @@ Transform:
   m_Children:
   - {fileID: 6349114549203519082}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &6480236383977824766
 NavMeshAgent:
@@ -287,12 +287,12 @@ MonoBehaviour:
   scoreValue: 20
   sinkSpeed: 2.5
   deathEffectTime: 1
-  deathClip: {fileID: 0}
-  hurtClip: {fileID: 0}
+  deathClip: {fileID: 8300000, guid: 1d3bfb9269f136947bf8ac164cace1ff, type: 3}
+  hurtClip: {fileID: 8300000, guid: 02e6208ec76314158a9f548f51fe9f11, type: 3}
   enemyAttack: {fileID: 6458618010744550527}
   enemyMovement: {fileID: 7592511977873776357}
   animator: {fileID: 5298533718823806765}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 4768579777231699662}
   capsuleCollider: {fileID: 4185364522713382290}
   hitParticles: {fileID: 0}
   isInvulnerable: 0
@@ -305,9 +305,10 @@ AudioSource:
   m_GameObject: {fileID: 3977671286801803543}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5048248619947790040, guid: b066eaf99d7bf45d6a529dc1899ddcea,
+    type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
